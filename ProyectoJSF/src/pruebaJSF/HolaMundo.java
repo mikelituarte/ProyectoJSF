@@ -16,6 +16,10 @@ public class HolaMundo {
 		nombre="Ignacio";
 	}
 
+	public String mostrarNombre(){
+		return this.nombre; // se retorno un String, se va a otro XHTML
+	}
+	
 	public String getNombre() {
 		
 		return nombre;
