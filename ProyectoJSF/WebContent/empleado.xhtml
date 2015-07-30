@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" 
+"http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml"    
+      xmlns:h="http://java.sun.com/jsf/html"
+      xmlns:f="http://java.sun.com/jsf/core">
+ 
+    <h:head>
+    	<title>JSF 2.0 Hello World</title>
+    </h:head>
+    <h:body bgcolor="white">
+    	<h3>Obtener Empleado por ID</h3>
+    	<h:form>
+    	   <h:inputText value="#{empleadoBean.id}"></h:inputText>
+    	   <h:commandButton value="BuscarEmpleado" action="#{empleadoBean.buscar}"></h:commandButton>
+    	</h:form> 
+		
+		<table bgcolor="#999999">
+			<tr bgcolor="#DADADA">
+				<td><b>Nombre</b></td>
+				<td><b>Apellido</b></td>
+				<td><b>Salario</b></td>
+				<td><b>ID</b></td>
+			</tr>
+			<tr bgcolor="#F3F3F3">
+				<td><h:outputText value= "#{empleadoBean.empleado.firstName}"></h:outputText></td>
+				<td><h:outputLabel for="Apellido" value="#{empleadoBean.empleado.lastName}" /></td>
+				<td><h:outputLabel for="Salario" value="#{empleadoBean.empleado.salary}" /></td>
+				<td><h:outputLabel for="Nombre" value="#{empleadoBean.empleado.employeeId}" /></td>
+			</tr>
+		</table>
+		
+		
+		
+    	
+    </h:body>
+</html>

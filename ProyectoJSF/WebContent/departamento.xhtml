@@ -5,17 +5,22 @@
       xmlns:h="http://java.sun.com/jsf/html"
       xmlns:f="http://java.sun.com/jsf/core">
  
+ 	
     <h:head>
     	<title>JSF 2.0 Hello World</title>
     </h:head>
     <h:body bgcolor="white">
     	<h3>Mostrar Departamento</h3>
     	<h:form> 
-    		<h:selectOneMenu label="DepartamentoBean">
+    		<h:selectOneMenu label="DepartamentoBean" value="#{departamentoBean.idDepartamento}">
     			<f:selectItems value="#{departamentoBean.lista}" var="d" itemValue ="#{d.departmentId}" itemLabel ="#{d.departmentName}">
-    		
     			</f:selectItems>
     		</h:selectOneMenu>
+    		   <h:commandButton value="Listar Empleados" action="#{departamentoBean.recuperarEmpleados}" />  
+    		<!--<h:commandButton value="Listar Empleados" action="mostrarEmpleados? faces-redirect=true &amp; includeViewParam=true"/>  -->
     	</h:form> 
+    	
+    	
+    	
     </h:body>
 </html>
